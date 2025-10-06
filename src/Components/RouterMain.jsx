@@ -5,13 +5,17 @@ import Footer from './Footer';
 
 const RouterMain = () => {
     return (
-        <div className='flex flex-col '>
-            <Navbar></Navbar>
+       <div>
+         <div className='flex flex-col container mx-auto '>
+              <Navbar></Navbar>
             <div className='min-h-screen'>
+                
                 <Outlet></Outlet>
             </div>
-            <Footer></Footer>
         </div>
+        <Footer></Footer>
+       </div>
+        
     );
 };
 
