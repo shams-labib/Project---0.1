@@ -28,7 +28,7 @@ const Book = ({singleBook}) => {
         <p>{singleBook.rating}</p>
     </div>
     <div className="card-actions">
-      <Link to={`/view/${singleBook.bookId}`}><button className="btn btn-primary">See Details</button></Link>
+      <Link to={`/bookDetails/${singleBook.bookId}`}><button className="btn btn-primary">See Details</button></Link>
     </div>
   </div>
 </div>
