@@ -1,21 +1,26 @@
 
 const getStoreBook = ()=>{
-    const storeBook = localStorage.getItem('readList');
-    if(storeBook){
-        const stroreBookData = JSON.parse(storeBook);
-        return stroreBookData;
+    const storeBookSTR = localStorage.getItem("readlist");
+
+    if(storeBookSTR){
+          const storeBookdata = JSON.parse(storeBookSTR)
+          return storeBookdata
+    } else{
+        return []
     }
 }
 
 const addItemStore = (id)=>{
-      const storeData = getStoreBook();
-      if(storeData){
-        alert('This data is already available')
-      }else{
-         storeData.push(id);
-         const data = JSON.stringify(storeData);
-         localStorage.setItem("ReadLisr", data);
-      }
+            
+    const storeBookData = getStoreBook();
+    if(storeBookData.includes(id)) {
+        alert('Id is already Available')
+    } else{
+        storeBookData.push(id)
+      
+         const data = JSON.stringify(storeBookData);
+         localStorage.setItem('readlist', data)
+    }
 }
 
-export{addItemStore, getStoreBook}
+export{addItemStore ,getStoreBook}
